@@ -1,0 +1,36 @@
+.wrapper {
+  @apply flex h-40 py-20 items-center  justify-between;
+}
+.logo {
+  @apply flex gap-2;
+  .img {
+    @apply w-16 h-16;
+  }
+}
+.logoText {
+  @apply text-white text-[30px] uppercase;
+}
+.container {
+  @apply flex items-center gap-4;
+
+  .searchInput {
+    @apply flex items-center gap-4 mr-[300px];
+  }
+
+  .input {
+    @apply bg-gray-900 p-4 w-[300px] rounded-lg text-white;
+    &::placeholder {
+      @apply text-white;
+    }
+  }
+}
+.searchSvg {
+  @apply w-10 h-10 cursor-pointer;
+}
+.cart {
+  position: relative;
+  @apply w-14 h-14 cursor-pointer;
+  .circle {
+    @apply absolute bg-white w-8 h-8 top-[-18px] right-[-20px] rounded-2xl text-center text-purple-800 font-bold text-xl;
+  }
+}

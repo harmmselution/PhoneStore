@@ -1,0 +1,13 @@
+@import 'normalize-scss';
+@include normalize();
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: rgb(88 28 135);
+  box-sizing: border-box;
+}
+.mainWrapper {
+  @apply bg-purple-900 flex flex-col min-h-screen w-[1200px] my-0 mx-auto;
+}

@@ -1,0 +1,9 @@
+.tabsWrapper {
+  @apply flex gap-1 justify-center gap-4;
+}
+.tab {
+  @apply w-2/5 text-black text-3xl bg-purple-700 rounded-lg text-center py-4;
+  &:hover {
+    @apply bg-purple-500 text-white;
+  }
+}
