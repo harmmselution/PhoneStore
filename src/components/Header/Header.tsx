@@ -17,12 +17,6 @@ export const Header = (props: Props) => {
           </a>
         </div>
         <div className={s.container}>
-          <div className={s.searchInput}>
-            <input type="text" placeholder="I'm searching..." className={s.input} />
-            <div className={s.searchSvg}>
-              <img src={search} alt="search" />
-            </div>
-          </div>
           <div className={s.cart}>
             <img src={cart} alt="cart" />
             <div className={s.circle}>3</div>

@@ -9,5 +9,21 @@ body {
   box-sizing: border-box;
 }
 .mainWrapper {
-  @apply bg-purple-900 flex flex-col min-h-screen w-[1200px] my-0 mx-auto;
+  @apply bg-purple-900 flex flex-col min-h-screen max-w-[1200px] px-[15px] my-0 mx-auto;
+}
+
+@media (max-width: 1200px) {
+  .mainWrapper {
+    max-width: 970px;
+  }
+}
+@media (max-width: 990px) {
+  .mainWrapper {
+    max-width: 750px;
+  }
+}
+@media (max-width: 767px) {
+  .mainWrapper {
+    max-width: none;
+  }
 }
