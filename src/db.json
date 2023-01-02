@@ -1,0 +1,113 @@
+[
+  {
+    "id": 0,
+    "category": "phone",
+    "imageUrl": "https://ishop.if.ua/sites/default/files/iphones/iphone11-purple-select-2019_0.png",
+    "name": "Apple Iphone 11",
+    "price": "630$"
+  },
+  {
+    "id": 1,
+    "category": "phone",
+    "imageUrl": "https://www.chooseyourmobile.com/wp-content/uploads/2020/12/Lenovo-K12-Pro.jpg",
+    "name": "Lenovo K12 Pro",
+    "price": "335$"
+  },
+  {
+    "id": 2,
+    "category": "phone",
+    "imageUrl": "https://www.yaphone.com/2605-home_default/samsung-galaxy-a50-a505fd-128gb-4gb-ram-dual-sim-negro.jpg",
+    "name": "Samsung A50",
+    "price": "425$"
+  },
+  {
+    "id": 3,
+    "category": "phone",
+    "imageUrl": "https://xiaomitiendaperu.com/wp-content/uploads/2020/08/1.png",
+    "name": "Xiaomi Redmi 9A",
+    "price": "345$"
+  },
+  {
+    "id": 4,
+    "category": "phone",
+    "imageUrl": "https://www.pngmart.com/files/22/iPhone-14-PNG-Image.png",
+    "name": "Apple Iphone 14",
+    "price": "800$"
+  },
+  {
+    "id": 5,
+    "category": "phone",
+    "imageUrl": "https://gadgetcentral.co.ke/wp-content/uploads/2022/06/Xiaomi-Redmi-Note-11-Pro-768x768.jpg",
+    "name": "Xiaomi Redmi Note 11 Pro",
+    "price": "410$"
+  },
+  {
+    "id": 6,
+    "category": "phone",
+    "imageUrl": "https://newscentre.vodafone.co.uk/app/uploads/2022/02/sm-s906_galaxys22plus_front_green_211119-768x512.png",
+    "name": "750$"
+  },
+  {
+    "id": 7,
+    "category": "phone",
+    "imageUrl": "https://amarprice.com/wp-content/uploads/Lenovo-K10-Plus.jpg",
+    "name": "Lenovo K10 Plus",
+    "price": "321$"
+  },
+  {
+    "id": 8,
+    "category": "laptop",
+    "imageUrl": "https://ishop.if.ua/sites/default/files/iphones/iphone11-purple-select-2019_0.png",
+    "name": "хУйфывфывыф1",
+    "price": "630$"
+  },
+  {
+    "id": 9,
+    "category": "laptop",
+    "imageUrl": "https://www.chooseyourmobile.com/wp-content/uploads/2020/12/Lenovo-K12-Pro.jpg",
+    "name": "Lenovo K12 Pro",
+    "price": "630$"
+  },
+  {
+    "id": 10,
+    "category": "laptop",
+    "imageUrl": "https://www.yaphone.com/2605-home_default/samsung-galaxy-a50-a505fd-128gb-4gb-ram-dual-sim-negro.jpg",
+    "name": "Samsung A50",
+    "price": "630$"
+  },
+  {
+    "id": 11,
+    "category": "laptop",
+    "imageUrl": "https://xiaomitiendaperu.com/wp-content/uploads/2020/08/1.png",
+    "name": "Xiaomi Redmi 9A",
+    "price": "630$"
+  },
+  {
+    "id": 12,
+    "category": "laptop",
+    "imageUrl": "https://www.pngmart.com/files/22/iPhone-14-PNG-Image.png",
+    "name": "Apple Iphone 14",
+    "price": "630$"
+  },
+  {
+    "id": 13,
+    "category": "laptop",
+    "imageUrl": "https://gadgetcentral.co.ke/wp-content/uploads/2022/06/Xiaomi-Redmi-Note-11-Pro-768x768.jpg",
+    "name": "Xiaomi Redmi Note 11 Pro",
+    "price": "630$"
+  },
+  {
+    "id": 14,
+    "category": "laptop",
+    "imageUrl": "https://newscentre.vodafone.co.uk/app/uploads/2022/02/sm-s906_galaxys22plus_front_green_211119-768x512.png",
+    "name": "Samsung Galaxy S22",
+    "price": "630$"
+  },
+  {
+    "id": 15,
+    "category": "laptop",
+    "imageUrl": "https://amarprice.com/wp-content/uploads/Lenovo-K10-Plus.jpg",
+    "name": "Lenovo K10 Plus",
+    "price": "630$"
+  }
+]
