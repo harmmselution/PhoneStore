@@ -8,6 +8,7 @@ interface ICards {
   category: string;
   imageUrl: string;
   name: string;
+  price: string;
 }
 export const CardsContainer = (props: Props) => {
   const [items, setItems] = useState<ICards[]>([]);

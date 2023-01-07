@@ -1,16 +1,16 @@
-import { Header } from './components/Header/Header';
 import './scss/index.scss';
-import { Tabs } from './components/Tabs/Tabs';
-import { Slider } from './components/Slider/Slider';
-import { CardsContainer } from './components/Cards/CardsContainer';
-
+import { Route, Routes } from 'react-router-dom';
+import Home from './components/Home/Home';
+import Cart from './components/Cart/Cart';
+import { Header } from './components/Header/Header';
 function App() {
   return (
     <div className="mainWrapper">
       <Header />
-      <Tabs />
-      <Slider />
-      <CardsContainer />
+      <Routes>
+        <Route path="/" element={<Home />}></Route>
+        <Route path="/cart" element={<Cart />}></Route>
+      </Routes>
     </div>
   );
 }

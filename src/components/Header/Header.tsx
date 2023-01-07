@@ -2,9 +2,9 @@ import s from './Header.module.scss';
 import phone from '../../assets/phone.svg';
 import search from '../../assets/search.png';
 import cart from '../../assets/cart.svg';
-type Props = {};
+import { Link } from 'react-router-dom';
 
-export const Header = (props: Props) => {
+export const Header = () => {
   return (
     <header>
       <div className={s.wrapper}>
@@ -16,12 +16,14 @@ export const Header = (props: Props) => {
             Mobile Store
           </a>
         </div>
-        <div className={s.container}>
-          <div className={s.cart}>
-            <img src={cart} alt="cart" />
-            <div className={s.circle}>3</div>
+        <Link to="/cart">
+          <div className={s.container}>
+            <div className={s.cart}>
+              <img src={cart} alt="cart" />
+              <div className={s.circle}>3</div>
+            </div>
           </div>
-        </div>
+        </Link>
       </div>
     </header>
   );
