@@ -110,5 +110,61 @@
     "imageUrl": "https://static.pepper.ru/threads/raw/Ro43m/300567_1/re/1024x1024/qt/60/300567_1.jpg",
     "name": "Xiaomi Redmi G",
     "price": "1850$"
+  },
+  {
+    "id": 16,
+    "category": "tablet",
+    "imageUrl": "https://img.okay.cz/gal/ipad-tablet-apple-ipad-10-2-wi-fi-32gb-space-grey-2020-zoom_product-1556973.jpg",
+    "name": "iPad 10.2",
+    "price": "450$"
+  },
+  {
+    "id": 17,
+    "category": "tablet",
+    "imageUrl": "https://promart.vteximg.com.br/arquivos/ids/938533-1000-1000/image-8cf4f64bcb36456380edd5ffac17994b.jpg?v=637576401485900000",
+    "name": "Lenovo M10 ",
+    "price": "250$"
+  },
+  {
+    "id": 18,
+    "category": "tablet",
+    "imageUrl": "https://exotique.com.mt/wp-content/uploads/2020/06/Samsung-Galaxy-Tab-S6-Lite-10.4-WiFi-2019-64GB-Grey-v3-875x1486.jpg",
+    "name": "Samsung Galaxy Tab S6 ",
+    "price": "400$"
+  },
+  {
+    "id": 19,
+    "category": "tablet",
+    "imageUrl": "https://www.pakmobizone.pk/wp-content/uploads/2022/10/Xiaomi-Redmi-Pad-Graphite-Grey-7.png",
+    "name": "Xiaomi Redmi Pad",
+    "price": "350$"
+  },
+  {
+    "id": 20,
+    "category": "tablet",
+    "imageUrl": "https://api.epic.com.cy/cdn/storage/products/ipad-air-2022-space-grey-2-jpg-v8f5Jwx2Y.jpg",
+    "name": "iPad Air 2022",
+    "price": "800$"
+  },
+  {
+    "id": 21,
+    "category": "tablet",
+    "imageUrl": "https://images.frandroid.com/wp-content/uploads/2021/08/xiaomi-mi-pad-5-pro-frandroid-2021.png",
+    "name": "Xiaomi Pad 5",
+    "price": "500$"
+  },
+  {
+    "id": 22,
+    "category": "tablet",
+    "imageUrl": "https://brain.com.ua/static/images/prod_img/0/2/U0367102_3big.jpg",
+    "name": "Samsung Galaxy Tab A 8.0",
+    "price": "200$"
+  },
+  {
+    "id": 23,
+    "category": "tablet",
+    "imageUrl": "https://dotekomanie.cz/wp-content/uploads/2021/03/lenovo-tablet-yoga-smart-tab-subseries-hero-725x515x.jpg",
+    "name": "Lenovo Yoga Tab 13",
+    "price": "1200$"
   }
 ]
