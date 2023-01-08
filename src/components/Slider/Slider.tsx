@@ -51,8 +51,8 @@ export const Slider = () => {
         <div className="flex justify-center">
           {slides.map((slide, index) => {
             return (
-              <div className="cursor-pointer">
-                <RxDotFilled size={40} onClick={() => goToSlide(index)} key={`${slide}_${index}`} />
+              <div className="cursor-pointer" key={`${slide}_${index}`}>
+                <RxDotFilled size={40} onClick={() => goToSlide(index)} />
               </div>
             );
           })}

@@ -1,168 +1,168 @@
 [
   {
     "id": 0,
-    "category": "phone",
+    "category": "Mobile Phones",
     "imageUrl": "https://ishop.if.ua/sites/default/files/iphones/iphone11-purple-select-2019_0.png",
     "name": "Apple Iphone 11",
     "price": "630$"
   },
   {
     "id": 1,
-    "category": "phone",
+    "category": "Mobile Phones",
     "imageUrl": "https://www.chooseyourmobile.com/wp-content/uploads/2020/12/Lenovo-K12-Pro.jpg",
     "name": "Lenovo K12 Pro",
     "price": "335$"
   },
   {
     "id": 2,
-    "category": "phone",
+    "category": "Mobile Phones",
     "imageUrl": "https://www.yaphone.com/2605-home_default/samsung-galaxy-a50-a505fd-128gb-4gb-ram-dual-sim-negro.jpg",
     "name": "Samsung A50",
     "price": "425$"
   },
   {
     "id": 3,
-    "category": "phone",
+    "category": "Mobile Phones",
     "imageUrl": "https://xiaomitiendaperu.com/wp-content/uploads/2020/08/1.png",
     "name": "Xiaomi Redmi 9A",
     "price": "345$"
   },
   {
     "id": 4,
-    "category": "phone",
+    "category": "Mobile Phones",
     "imageUrl": "https://www.pngmart.com/files/22/iPhone-14-PNG-Image.png",
     "name": "Apple Iphone 14",
     "price": "800$"
   },
   {
     "id": 5,
-    "category": "phone",
+    "category": "Mobile Phones",
     "imageUrl": "https://gadgetcentral.co.ke/wp-content/uploads/2022/06/Xiaomi-Redmi-Note-11-Pro-768x768.jpg",
     "name": "Xiaomi Redmi Note 11 Pro",
     "price": "410$"
   },
   {
     "id": 6,
-    "category": "phone",
+    "category": "Mobile Phones",
     "imageUrl": "https://newscentre.vodafone.co.uk/app/uploads/2022/02/sm-s906_galaxys22plus_front_green_211119-768x512.png",
     "name": "Samsung Galaxy S22",
     "price": "750$"
   },
   {
     "id": 7,
-    "category": "phone",
+    "category": "Mobile Phones",
     "imageUrl": "https://amarprice.com/wp-content/uploads/Lenovo-K10-Plus.jpg",
     "name": "Lenovo K10 Plus",
     "price": "320$"
   },
   {
     "id": 8,
-    "category": "laptop",
+    "category": "Laptops",
     "imageUrl": "https://www.toggi.services/wp-content/uploads/2021/01/IdeaPad_3_14ADA05_CT1_01-768x576.png",
     "name": "Lenovo Ideapad 3",
     "price": "815$"
   },
   {
     "id": 9,
-    "category": "laptop",
+    "category": "Laptops",
     "imageUrl": "https://cdn.shopify.com/s/files/1/1409/9796/products/Playforce_Watermark_3978f0c3-3259-44d2-a9a5-6a74ffff4262_grande.png?v=1608364287",
     "name": "Macbook Air 13",
     "price": "1350$"
   },
   {
     "id": 10,
-    "category": "laptop",
+    "category": "Laptops",
     "imageUrl": "https://cdn.phonebunch.com/news-images/2021/04/Samsung-Galaxy-Book-Pro-2-phonebunch.jpg",
     "name": "Samsung Galaxy Book Pro",
     "price": "750$"
   },
   {
     "id": 11,
-    "category": "laptop",
+    "category": "Laptops",
     "imageUrl": "https://avatars.mds.yandex.net/get-mpic/1865219/img_id9077425412436803289.jpeg/orig",
     "name": "Lenovo Legion 5",
     "price": "1735$"
   },
   {
     "id": 12,
-    "category": "laptop",
+    "category": "Laptops",
     "imageUrl": "https://samsung-service.by/wp-content/uploads/2014/07/ru_NP270E5E-K03RU_533_Front_black_10029695053920-scaled.jpg",
     "name": "Samsung 550P7C",
     "price": "625$"
   },
   {
     "id": 13,
-    "category": "laptop",
+    "category": "Laptops",
     "imageUrl": "https://surfacepro.vn/upload/2021/03/18/758843_1.jpg",
     "name": "Macbook Pro 14",
     "price": "1680$"
   },
   {
     "id": 14,
-    "category": "laptop",
+    "category": "Laptops",
     "imageUrl": "https://i-vse.ru/wa-data/public/shop/products/18/13/1318/images/10529/10529.970.jpeg",
     "name": "Xiaomi RedmiBook Pro 14",
     "price": "1265$"
   },
   {
     "id": 15,
-    "category": "laptop",
+    "category": "Laptops",
     "imageUrl": "https://static.pepper.ru/threads/raw/Ro43m/300567_1/re/1024x1024/qt/60/300567_1.jpg",
     "name": "Xiaomi Redmi G",
     "price": "1850$"
   },
   {
     "id": 16,
-    "category": "tablet",
+    "category": "Tablets",
     "imageUrl": "https://img.okay.cz/gal/ipad-tablet-apple-ipad-10-2-wi-fi-32gb-space-grey-2020-zoom_product-1556973.jpg",
-    "name": "iPad 10.2",
+    "name": " Apple iPad 10.2",
     "price": "450$"
   },
   {
     "id": 17,
-    "category": "tablet",
+    "category": "Tablets",
     "imageUrl": "https://promart.vteximg.com.br/arquivos/ids/938533-1000-1000/image-8cf4f64bcb36456380edd5ffac17994b.jpg?v=637576401485900000",
     "name": "Lenovo M10 ",
     "price": "250$"
   },
   {
     "id": 18,
-    "category": "tablet",
+    "category": "Tablets",
     "imageUrl": "https://exotique.com.mt/wp-content/uploads/2020/06/Samsung-Galaxy-Tab-S6-Lite-10.4-WiFi-2019-64GB-Grey-v3-875x1486.jpg",
     "name": "Samsung Galaxy Tab S6 ",
     "price": "400$"
   },
   {
     "id": 19,
-    "category": "tablet",
+    "category": "Tablets",
     "imageUrl": "https://www.pakmobizone.pk/wp-content/uploads/2022/10/Xiaomi-Redmi-Pad-Graphite-Grey-7.png",
     "name": "Xiaomi Redmi Pad",
     "price": "350$"
   },
   {
     "id": 20,
-    "category": "tablet",
+    "category": "Tablets",
     "imageUrl": "https://api.epic.com.cy/cdn/storage/products/ipad-air-2022-space-grey-2-jpg-v8f5Jwx2Y.jpg",
-    "name": "iPad Air 2022",
+    "name": " Apple iPad Air 2022",
     "price": "800$"
   },
   {
     "id": 21,
-    "category": "tablet",
+    "category": "Tablets",
     "imageUrl": "https://images.frandroid.com/wp-content/uploads/2021/08/xiaomi-mi-pad-5-pro-frandroid-2021.png",
     "name": "Xiaomi Pad 5",
     "price": "500$"
   },
   {
     "id": 22,
-    "category": "tablet",
+    "category": "Tablets",
     "imageUrl": "https://brain.com.ua/static/images/prod_img/0/2/U0367102_3big.jpg",
     "name": "Samsung Galaxy Tab A 8.0",
     "price": "200$"
   },
   {
     "id": 23,
-    "category": "tablet",
+    "category": "Tablets",
     "imageUrl": "https://dotekomanie.cz/wp-content/uploads/2021/03/lenovo-tablet-yoga-smart-tab-subseries-hero-725x515x.jpg",
     "name": "Lenovo Yoga Tab 13",
     "price": "1200$"

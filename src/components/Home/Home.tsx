@@ -6,8 +6,8 @@ import { CardsContainer } from '../Cards/CardsContainer';
 const Home = () => {
   return (
     <>
-      <Tabs />
       <Slider />
+      <Tabs />
       <CardsContainer />
     </>
   );

@@ -1,24 +1,20 @@
 import s from './Tabs.module.scss';
-import search from '../../assets/search.png';
-
-type Props = {};
-
-export const Tabs = (props: Props) => {
+import { useSelector, useDispatch } from 'react-redux';
+import { changeCategory } from '../../redux/filterSlice';
+export const Tabs = () => {
+  const category: string = useSelector((state: any) => state.filterReducer.category);
+  const dispatch = useDispatch();
+  const categories = ['Mobile Phones', 'Laptops', 'Tablets'];
   return (
-    <>
-      <div className="flex">
-        <div className={s.searchInput}>
-          <input type="text" placeholder="I'm searching..." className={s.input} />
-          <div className={s.searchSvg}>
-            <img src={search} alt="search" />
-          </div>
+    <div className={s.tabsWrapper}>
+      {categories.map((item, i) => (
+        <div
+          onClick={() => dispatch(changeCategory(categories[i]))}
+          className={item === category ? s.active : s.tab}
+          key={`${i}_${item}`}>
+          {item}
         </div>
-      </div>
-      <div className={s.tabsWrapper}>
-        <div className={s.tab}>Mobile Phones</div>
-        <div className={s.tab}>Laptops</div>
-        <div className={s.tab}>Tablets</div>
-      </div>
-    </>
+      ))}
+    </div>
   );
 };

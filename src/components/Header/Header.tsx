@@ -1,9 +1,8 @@
 import s from './Header.module.scss';
 import phone from '../../assets/phone.svg';
-import search from '../../assets/search.png';
 import cart from '../../assets/cart.svg';
 import { Link } from 'react-router-dom';
-
+import t from '../Tabs/Tabs.module.scss';
 export const Header = () => {
   return (
     <header>
