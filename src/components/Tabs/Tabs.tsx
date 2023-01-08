@@ -1,8 +1,10 @@
 import s from './Tabs.module.scss';
 import { useSelector, useDispatch } from 'react-redux';
 import { changeCategory } from '../../redux/filterSlice';
-export const Tabs = () => {
-  const category: string = useSelector((state: any) => state.filterReducer.category);
+interface Props {
+  category: string;
+}
+export const Tabs = ({ category }: Props) => {
   const dispatch = useDispatch();
   const categories = ['Mobile Phones', 'Laptops', 'Tablets'];
   return (

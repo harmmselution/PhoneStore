@@ -4,30 +4,21 @@ import { useState, useEffect } from 'react';
 import { Pagination } from '../Pagination/Pagination';
 import s from '../Tabs/Tabs.module.scss';
 import search from '../../assets/search.png';
-type Props = {};
-interface ICards {
-  id: number;
-  category: string;
-  imageUrl: string;
-  name: string;
-  price: string;
-}
-export const CardsContainer: React.FC<Props> = (props) => {
-  const [items, setItems] = useState<ICards[]>([]);
-  console.log(items);
-  const [currentValue, setCurrentValue] = useState('');
-  const [currentPage, setCurrentPage] = useState(1);
+import { ICards } from '../Home/Home';
 
-  useEffect(() => {
-    axios
-      .get(
-        `https://63b191980d51f5b2971a66f1.mockapi.io/items?page=${currentPage}&limit=8&search=${currentValue}`,
-      )
-      .then((res) => {
-        setItems(res.data);
-      });
-  }, [currentPage, currentValue]);
+type Props = {
+  currentValue: string;
+  changeCurrentValue: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  items: ICards[];
+  setCurrentPage: (num: number) => void;
+};
 
+export const CardsContainer: React.FC<Props> = ({
+  currentValue,
+  changeCurrentValue,
+  items,
+  setCurrentPage,
+}) => {
   return (
     <>
       <div className="flex mt-20">
@@ -37,7 +28,7 @@ export const CardsContainer: React.FC<Props> = (props) => {
             placeholder="I'm searching..."
             className={s.input}
             value={currentValue}
-            onChange={(e) => setCurrentValue(e.target.value)}
+            onChange={changeCurrentValue}
           />
           <div className={s.searchSvg}>
             <img src={search} alt="search" />
@@ -49,7 +40,7 @@ export const CardsContainer: React.FC<Props> = (props) => {
           <Card {...card} key={`${card.id}_${index}`} />
         ))}
       </div>
-      <Pagination onChangePage={(number: number) => setCurrentPage(number)} />
+      <Pagination onChangePage={setCurrentPage} />
     </>
   );
 };
