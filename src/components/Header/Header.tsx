@@ -8,10 +8,10 @@ export const Header = () => {
     <header>
       <div className={s.wrapper}>
         <div className={s.logo}>
-          <a href="#1">
+          <a href="/">
             <img src={phone} alt="phone" className={s.img} />
           </a>
-          <a className={s.logoText} href="#1">
+          <a className={s.logoText} href="/">
             Mobile Store
           </a>
         </div>

@@ -1,10 +1,11 @@
 import { Card } from './Card';
 import axios from 'axios';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { Pagination } from '../Pagination/Pagination';
 import s from '../Tabs/Tabs.module.scss';
 import search from '../../assets/search.png';
 import { ICards } from '../Home/Home';
+import debounce from 'lodash.debounce';
 
 type Props = {
   currentValue: string;
@@ -19,6 +20,17 @@ export const CardsContainer: React.FC<Props> = ({
   items,
   setCurrentPage,
 }) => {
+  const [value, setValue] = useState('');
+  const updateSearchValue = useCallback(
+    debounce((e) => {
+      changeCurrentValue(e);
+    }, 2000),
+    [],
+  );
+  const onChangeInput = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setValue(e.target.value);
+    updateSearchValue(e);
+  };
   return (
     <>
       <div className="flex mt-20">
@@ -27,8 +39,8 @@ export const CardsContainer: React.FC<Props> = ({
             type="text"
             placeholder="I'm searching..."
             className={s.input}
-            value={currentValue}
-            onChange={changeCurrentValue}
+            value={value}
+            onChange={onChangeInput}
           />
           <div className={s.searchSvg}>
             <img src={search} alt="search" />

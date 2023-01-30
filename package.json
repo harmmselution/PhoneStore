@@ -14,7 +14,9 @@
     "@types/react-dom": "^18.0.0",
     "D": "^1.0.0",
     "axios": "^1.2.2",
+    "lodash.debounce": "^4.0.8",
     "normalize-scss": "^7.0.1",
+    "qs": "^6.11.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.7.1",
@@ -51,5 +53,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@types/lodash.debounce": "^4.0.7"
   }
 }

@@ -5,8 +5,9 @@ interface Props {
   category: string;
 }
 export const Tabs = ({ category }: Props) => {
+  console.log(category);
   const dispatch = useDispatch();
-  const categories = ['Mobile Phones', 'Laptops', 'Tablets'];
+  const categories = ['All', 'Mobile Phones', 'Laptops', 'Tablets'];
   return (
     <div className={s.tabsWrapper}>
       {categories.map((item, i) => (

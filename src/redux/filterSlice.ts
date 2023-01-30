@@ -1,7 +1,9 @@
 import { createSlice } from '@reduxjs/toolkit';
-
-const initialState = {
-  category: 'Mobile Phones',
+interface IInitialState {
+  category: string;
+}
+const initialState: IInitialState = {
+  category: '',
 };
 
 const filterSlice = createSlice({

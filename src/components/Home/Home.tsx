@@ -4,7 +4,11 @@ import { Slider } from '../Slider/Slider';
 import { CardsContainer } from '../Cards/CardsContainer';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import { changeCategory } from '../../redux/filterSlice';
+import { useNavigate } from 'react-router-dom';
+import qs from 'qs';
+
 export interface ICards {
   id: number;
   category: string;
@@ -15,31 +19,45 @@ export interface ICards {
 
 const Home: React.FC = () => {
   const [items, setItems] = useState<ICards[]>([]);
-  const [currentValue, setCurrentValue] = useState('');
+  const [searchValue, setCurrentValue] = useState('');
   const [currentPage, setPage] = useState(1);
-  const category: string = useSelector((state: any) => state.filterReducer.category);
-  console.log(category);
+  let category: string = useSelector((state: any) => state.filterReducer.category);
+  const navigate = useNavigate();
   const changeCurrentValue = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setCurrentValue(e.currentTarget.value);
+    setCurrentValue(e.target.value);
   };
   const setCurrentPage = (num: number) => {
     setPage(num);
   };
+  // useEffect(()=>{
+  //   if(window.location)
+  // },[])
   useEffect(() => {
     axios
       .get(
-        `https://63b191980d51f5b2971a66f1.mockapi.io/items?page=${currentPage}&limit=8&search=${currentValue}&category=${category}`,
+        `https://63b191980d51f5b2971a66f1.mockapi.io/items?page=${currentPage}&limit=8&category=${
+          category === 'All' ? '' : category
+        }&search=${searchValue}`,
       )
       .then((res) => {
         setItems(res.data);
       });
-  }, [currentPage, currentValue, category]);
+  }, [currentPage, searchValue, category]);
+
+  useEffect(() => {
+    const queryString = qs.stringify({
+      category,
+      currentPage,
+    });
+    navigate(`?${queryString}`);
+  }, [category, currentPage]);
+
   return (
     <>
       <Slider />
       <Tabs category={category} />
       <CardsContainer
-        currentValue={currentValue}
+        currentValue={searchValue}
         changeCurrentValue={changeCurrentValue}
         items={items}
         setCurrentPage={setCurrentPage}

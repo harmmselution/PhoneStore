@@ -1,0 +1,30 @@
+.wrapper {
+  @apply flex h-40 py-20 items-center  justify-between;
+}
+
+.logo {
+  @apply flex gap-2;
+}
+.logo .img {
+  @apply w-12 h-12;
+}
+.logo .logoText {
+  @apply text-white text-[30px] uppercase;
+}
+
+.container {
+  @apply flex items-center gap-56;
+}
+
+.cart {
+  @apply w-14 h-14 cursor-pointer relative mr-8;
+}
+.cart .circle {
+  @apply absolute bg-white w-8 h-8 top-[-18px] right-[-20px] rounded-2xl text-center text-purple-800 font-bold text-xl;
+}
+
+@media (max-width: 560px) {
+  .logo .img {
+    @apply w-0 h-0;
+  }
+}/*# sourceMappingURL=Header.module.css.map */

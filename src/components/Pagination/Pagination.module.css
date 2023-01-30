@@ -1,0 +1,26 @@
+.pagination {
+  margin-top: 25px;
+  display: flex;
+  align-self: center;
+}
+.pagination li {
+  display: inline-block;
+}
+.pagination li a {
+  text-align: center;
+  width: 45px;
+  line-height: 42px;
+  height: 45px;
+  border: 1px solid black;
+  border-radius: 30px;
+  margin-right: 10px;
+  display: inline-block;
+  cursor: pointer;
+  color: rgb(41, 26, 41);
+}
+.pagination li a:hover {
+  background-color: #fff;
+}
+.pagination :global .selected a {
+  background-color: white;
+}/*# sourceMappingURL=Pagination.module.css.map */

@@ -1,0 +1,23 @@
+.slider {
+  @apply h-[580px] pt-8 relative;
+}
+
+.sliderElement {
+  @apply w-full h-full rounded-2xl bg-center bg-cover  duration-500 relative;
+}
+
+.sliderHeader {
+  @apply text-center text-white text-[40px] pt-4;
+}
+
+.rightArrow {
+  @apply absolute top-[50%] right-0   text-white cursor-pointer;
+}
+
+.leftArrow {
+  @apply absolute top-[50%] left-0  text-white cursor-pointer;
+}
+
+.itemName {
+  @apply pl-4 text-4xl text-violet-900 font-medium;
+}/*# sourceMappingURL=Slider.module.css.map */

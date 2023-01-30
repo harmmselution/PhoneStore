@@ -1,0 +1,6 @@
+.card {
+  @apply w-[23%] flex flex-col items-center gap-y-4 bg-white rounded-xl;
+}
+.card img {
+  @apply h-[269px] py-4;
+}/*# sourceMappingURL=Card.module.css.map */
