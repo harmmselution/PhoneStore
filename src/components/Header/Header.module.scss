@@ -17,10 +17,12 @@
 .cart {
   @apply w-14 h-14 cursor-pointer relative mr-8;
   .circle {
-    @apply absolute bg-white w-8 h-8 top-[-18px] right-[-20px] rounded-2xl text-center text-purple-800 font-bold text-xl;
+    @apply flex flex-col justify-center absolute bg-white w-[100px] h-[60px] top-[-18px] left-[60px] rounded-2xl text-center text-purple-800 font-bold text-xl;
   }
 }
-
+.price {
+  @apply text-black;
+}
 @media (max-width: 560px) {
   .logo {
     .img {

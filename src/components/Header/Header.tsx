@@ -6,7 +6,7 @@ import t from '../Tabs/Tabs.module.scss';
 import { useSelector } from 'react-redux';
 export const Header = () => {
   const state = useSelector((state: any) => state.cartReducer);
-  console.log(state);
+  const totalCount = state.items.reduce((sum: number, item: any) => sum + item.count, 0);
   return (
     <header>
       <div className={s.wrapper}>
@@ -23,8 +23,8 @@ export const Header = () => {
             <div className={s.cart}>
               <img src={cart} alt="cart" />
               <div className={s.circle}>
-                {state.items.length} <br />
-                total price:{state.totalPrice}
+                {totalCount}
+                <span className={s.price}> {state.totalPrice}$</span>
               </div>
             </div>
           </div>

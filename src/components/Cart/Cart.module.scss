@@ -1,0 +1,9 @@
+.card {
+  @apply w-[100%] flex gap-20 h-[140px] items-center gap-y-4 bg-white rounded-xl;
+  img {
+    @apply h-[100%] py-4;
+  }
+}
+.cardContainer {
+  @apply flex flex-col gap-4 justify-center;
+}
