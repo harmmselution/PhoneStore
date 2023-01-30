@@ -5,7 +5,7 @@ import { CardsContainer } from '../Cards/CardsContainer';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useSelector, useDispatch } from 'react-redux';
-import { changeCategory } from '../../redux/filterSlice';
+import { changeCategory, setFilters } from '../../redux/filterSlice';
 import { useNavigate } from 'react-router-dom';
 import qs from 'qs';
 
@@ -20,18 +20,13 @@ export interface ICards {
 const Home: React.FC = () => {
   const [items, setItems] = useState<ICards[]>([]);
   const [searchValue, setCurrentValue] = useState('');
-  const [currentPage, setPage] = useState(1);
   let category: string = useSelector((state: any) => state.filterReducer.category);
+  let currentPage: number = useSelector((state: any) => state.filterReducer.currentPage);
   const navigate = useNavigate();
   const changeCurrentValue = (e: React.ChangeEvent<HTMLInputElement>) => {
     setCurrentValue(e.target.value);
   };
-  const setCurrentPage = (num: number) => {
-    setPage(num);
-  };
-  // useEffect(()=>{
-  //   if(window.location)
-  // },[])
+
   useEffect(() => {
     axios
       .get(
@@ -60,7 +55,6 @@ const Home: React.FC = () => {
         currentValue={searchValue}
         changeCurrentValue={changeCurrentValue}
         items={items}
-        setCurrentPage={setCurrentPage}
       />
     </>
   );

@@ -1,10 +1,13 @@
 import s from './Pagination.module.scss';
 import ReactPaginate from 'react-paginate';
-type Props = {
-  onChangePage: (ads: number) => void;
-};
+import { useDispatch } from 'react-redux';
+import { setCurrentPage } from '../../redux/filterSlice';
 
-export const Pagination = ({ onChangePage }: Props) => {
+export const Pagination = () => {
+  const dispatch = useDispatch();
+  const onChangePage = (num: number) => {
+    dispatch(setCurrentPage(num));
+  };
   return (
     <>
       <ReactPaginate
