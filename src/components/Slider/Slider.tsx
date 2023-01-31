@@ -6,6 +6,7 @@ import { BsChevronCompactLeft } from 'react-icons/bs';
 import { BsChevronCompactRight } from 'react-icons/bs';
 import { RxDotFilled } from 'react-icons/rx';
 import { useState } from 'react';
+
 export const Slider = () => {
   const slides = [
     {

@@ -16,16 +16,13 @@ const filterSlice = createSlice({
     changeCategory: (store, action) => {
       store.category = action.payload;
     },
-    setFilters: (store, action) => {
-      store.category = action.payload;
-      store.currentPage = action.payload;
-    },
+
     setCurrentPage: (store, action) => {
       store.currentPage = action.payload;
     },
   },
 });
 
-export const { changeCategory, setFilters, setCurrentPage } = filterSlice.actions;
+export const { changeCategory, setCurrentPage } = filterSlice.actions;
 
 export default filterSlice.reducer;

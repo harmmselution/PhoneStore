@@ -5,10 +5,10 @@ import { CardsContainer } from '../Cards/CardsContainer';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useSelector, useDispatch } from 'react-redux';
-import { changeCategory, setFilters } from '../../redux/filterSlice';
+import { changeCategory } from '../../redux/filterSlice';
 import { useNavigate } from 'react-router-dom';
 import qs from 'qs';
-import { setAllItems, fetchItems } from '../../redux/itemsSlice';
+import { fetchItems } from '../../redux/itemsSlice';
 
 export interface ICards {
   id: number;
@@ -22,42 +22,38 @@ const Home: React.FC = () => {
   const [searchValue, setCurrentValue] = useState('');
   let category: string = useSelector((state: any) => state.filterReducer.category);
   let currentPage: number = useSelector((state: any) => state.filterReducer.currentPage);
+  const { allItems, status } = useSelector((state: any) => state.itemsReducer);
   const navigate = useNavigate();
   const changeCurrentValue = (e: React.ChangeEvent<HTMLInputElement>) => {
     setCurrentValue(e.target.value);
   };
-  const dispatch = useDispatch<any>();
-  const items = useSelector((state: any) => state.itemsReducer.allItems);
-
-  const getItems = async () => {
-    try {
-      dispatch(fetchItems({ category, searchValue, currentPage }));
-    } catch (error) {
-      console.log('ERROR', error);
-    }
-  };
+  const dispatch = useDispatch();
 
   useEffect(() => {
-    getItems();
-  }, [currentPage, searchValue, category]);
+    dispatch(fetchItems({ category, searchValue, currentPage }));
+  }, [currentPage, searchValue, category, dispatch]);
 
-  // useEffect(() => {
-  //   const queryString = qs.stringify({
-  //     category,
-  //     currentPage,
-  //   });
-  //   navigate(`?${queryString}`);
-  // }, [category, currentPage]);
-  console.log(items);
+  useEffect(() => {
+    const queryString = qs.stringify({
+      category,
+      currentPage,
+    });
+    navigate(`?${queryString}`);
+  }, [category, currentPage]);
+
   return (
     <>
       <Slider />
       <Tabs category={category} />
-      <CardsContainer
-        currentValue={searchValue}
-        changeCurrentValue={changeCurrentValue}
-        items={items}
-      />
+      {status === 'success' && (
+        <CardsContainer
+          currentValue={searchValue}
+          changeCurrentValue={changeCurrentValue}
+          items={allItems}
+        />
+      )}
+      {status === 'loading' && <div>ЗАГРУЗКА</div>}
+      {status === 'error' && <div>Ошибка</div>}
     </>
   );
 };

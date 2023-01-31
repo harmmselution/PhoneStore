@@ -1,11 +1,13 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
-
+import { ICards } from '../components/Home/Home';
 interface IAllItems {
-  allItems: any[];
+  allItems: ICards[];
+  status: string;
 }
 const initialState: IAllItems = {
   allItems: [],
+  status: 'loading',
 };
 
 export const fetchItems: any = createAsyncThunk(
@@ -24,18 +26,21 @@ export const fetchItems: any = createAsyncThunk(
 const filterSlice = createSlice({
   name: 'allItems',
   initialState,
-  reducers: {
-    setAllItems: (store, action) => {
-      store.allItems = action.payload;
-    },
-  },
+  reducers: {},
   extraReducers: (builder) => {
+    builder.addCase(fetchItems.pending, (state, action) => {
+      state.allItems = [];
+      state.status = 'loading';
+    });
     builder.addCase(fetchItems.fulfilled, (state, action) => {
       state.allItems = action.payload;
+      state.status = 'success';
+    });
+    builder.addCase(fetchItems.rejected, (state, action) => {
+      state.status = 'error';
+      state.allItems = [];
     });
   },
 });
-
-export const { setAllItems } = filterSlice.actions;
 
 export default filterSlice.reducer;
