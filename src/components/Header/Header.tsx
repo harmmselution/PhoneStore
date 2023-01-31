@@ -23,8 +23,8 @@ export const Header = () => {
             <div className={s.cart}>
               <img src={cart} alt="cart" />
               <div className={s.circle}>
-                {totalCount}
-                <span className={s.price}> {state.totalPrice}$</span>
+                {totalCount > 0 ? totalCount : 0}
+                <span className={s.price}> {state.totalPrice > 0 ? state.totalPrice : 0}$</span>
               </div>
             </div>
           </div>

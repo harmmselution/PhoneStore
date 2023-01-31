@@ -24,27 +24,22 @@ const cardSlice = createSlice({
     },
     removeProduct: (store, action) => {
       store.items = store.items.filter((obj) => obj.id !== action.payload);
+      store.totalPrice = store.items.reduce((sum, obj) => Number(obj.price) * obj.count + sum, 0);
     },
     clearCart: (store) => {
       store.items = [];
+      store.totalPrice = 0;
     },
-    increaseProducts: (store, action) => {
-      store.items.forEach((obj) => {
-        if (obj.id === action.payload) {
-          obj.count++;
-        } else return;
-      });
-    },
+
     decreaseProducts: (store, action) => {
-      store.items.forEach((obj) => {
-        if (obj.id === action.payload) {
-          obj.count--;
-        } else return;
-      });
+      let findItem = store.items.find((obj) => obj.id === action.payload);
+      if (findItem) {
+        findItem.count--;
+      }
+      store.totalPrice = store.items.reduce((sum, obj) => Number(obj.price) * obj.count + sum, 0);
     },
   },
 });
 
-export const { addProduct, removeProduct, clearCart, increaseProducts, decreaseProducts } =
-  cardSlice.actions;
+export const { addProduct, removeProduct, clearCart, decreaseProducts } = cardSlice.actions;
 export default cardSlice.reducer;

@@ -8,6 +8,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { changeCategory, setFilters } from '../../redux/filterSlice';
 import { useNavigate } from 'react-router-dom';
 import qs from 'qs';
+import { setAllItems, fetchItems } from '../../redux/itemsSlice';
 
 export interface ICards {
   id: number;
@@ -18,7 +19,6 @@ export interface ICards {
 }
 
 const Home: React.FC = () => {
-  const [items, setItems] = useState<ICards[]>([]);
   const [searchValue, setCurrentValue] = useState('');
   let category: string = useSelector((state: any) => state.filterReducer.category);
   let currentPage: number = useSelector((state: any) => state.filterReducer.currentPage);
@@ -26,27 +26,29 @@ const Home: React.FC = () => {
   const changeCurrentValue = (e: React.ChangeEvent<HTMLInputElement>) => {
     setCurrentValue(e.target.value);
   };
+  const dispatch = useDispatch<any>();
+  const items = useSelector((state: any) => state.itemsReducer.allItems);
+
+  const getItems = async () => {
+    try {
+      dispatch(fetchItems({ category, searchValue, currentPage }));
+    } catch (error) {
+      console.log('ERROR', error);
+    }
+  };
 
   useEffect(() => {
-    axios
-      .get(
-        `https://63b191980d51f5b2971a66f1.mockapi.io/items?page=${currentPage}&limit=8&category=${
-          category === 'All' ? '' : category
-        }&search=${searchValue}`,
-      )
-      .then((res) => {
-        setItems(res.data);
-      });
+    getItems();
   }, [currentPage, searchValue, category]);
 
-  useEffect(() => {
-    const queryString = qs.stringify({
-      category,
-      currentPage,
-    });
-    navigate(`?${queryString}`);
-  }, [category, currentPage]);
-
+  // useEffect(() => {
+  //   const queryString = qs.stringify({
+  //     category,
+  //     currentPage,
+  //   });
+  //   navigate(`?${queryString}`);
+  // }, [category, currentPage]);
+  console.log(items);
   return (
     <>
       <Slider />

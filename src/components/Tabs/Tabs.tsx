@@ -6,11 +6,9 @@ interface Props {
   category: string;
 }
 export const Tabs = ({ category }: Props) => {
-  console.log(category);
   const dispatch = useDispatch();
   const tabsRef = useRef<HTMLDivElement | null>(null);
-  const categories = ['All', 'Mobile Phones', 'Laptops', 'Tablets'];
-  console.log(tabsRef.current);
+  const categories = ['All', 'Laptops', 'Mobile Phones', 'Tablets'];
   return (
     <div className={s.tabsWrapper} ref={tabsRef}>
       {categories.map((item, i) => (
